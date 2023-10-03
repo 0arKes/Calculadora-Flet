@@ -5,8 +5,9 @@ def main(pg : ft.Page):
     resultado = ft.Text(value='0')
 
     pg.add(
-        ft.Row(controls=[resultado]),
-        ft.Row(
+        ft.Row(controls=[resultado],alignment='end'),
+        
+            ft.Row(
             controls=
         [
             ft.ElevatedButton(text='AC'),
