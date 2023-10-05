@@ -28,7 +28,7 @@ def main(pg : ft.Page):
     def BT (e):
         data = e.control.data
 
-        if data in ['1','2','3','4','5','6','7','8','9','0','*','.','%','/','-','+']:  
+        if data in ['1','2','3','4','5','6','7','8','9','0','*','.','%','/','-','+','**2']:  
             resultado.value = str(resultado.value) + str(data)
             pg.update()
 
@@ -39,8 +39,8 @@ def main(pg : ft.Page):
         if data == '=':
 
             guardar = []
-            guardar.append(resultado.value)
-            historico(guardar)
+            #guardar.append(resultado.value)
+            #historico(guardar)
 
             resultado.value = str(eval(resultado.value))
             print(resultado.value)
@@ -71,8 +71,7 @@ def main(pg : ft.Page):
                     [
                         ft.ElevatedButton(text='AC', bgcolor=c_lightblue, color=c_red,expand=2,data='ac',on_click=BT),
                         ft.ElevatedButton(text='/', bgcolor=c_lightblue, color=c_yellow,expand=1,data='/',on_click=BT),
-                        
-                        #ft.ElevatedButton(text='H', bgcolor=c_lightblue, color=c_white,expand=1),
+                        ft.ElevatedButton(text='2', bgcolor=c_lightblue, color=c_white,expand=1,data='**2',on_click=BT),
 
                     ], 
                 ),
