@@ -39,14 +39,13 @@ def main(pg : ft.Page):
         if data == '=':
 
             guardar = []
-            guardar.append(resultado.value)
-            historico(guardar)
+            #guardar.append(resultado.value)
+            #historico(guardar)
 
             resultado.value = str(eval(resultado.value))
             print(resultado.value)
             pg.update()
 
-        print(data)
 
     pg.add(
         ft.Container
@@ -70,13 +69,11 @@ def main(pg : ft.Page):
                         ft.Row(
                         controls=
                     [
-                        ft.ElevatedButton(text='AC', bgcolor=c_lightblue, color=c_red,expand=1,data='ac',on_click=BT),
-                        ft.ElevatedButton(text='%', bgcolor=c_lightblue, color=c_yellow,expand=1,data='%',on_click=BT),
+                        ft.ElevatedButton(text='AC', bgcolor=c_lightblue, color=c_red,expand=2,data='ac',on_click=BT),
+                        ft.ElevatedButton(text='²', bgcolor=c_lightblue, color=c_yellow,expand=1,data='**2',on_click=BT),
                         ft.ElevatedButton(text='/', bgcolor=c_lightblue, color=c_yellow,expand=1,data='/',on_click=BT),
-                        ft.ElevatedButton(text='H', bgcolor=c_lightblue, color=c_white,expand=1),
-
+                        
                     ], 
-                    #alignment=ft.MainAxisAlignment.SPACE_BETWEEN
                 ),
                     ft.Row(controls=
                     [
@@ -85,7 +82,6 @@ def main(pg : ft.Page):
                         ft.ElevatedButton(text='9', bgcolor=c_lowblue, color=c_white,expand=1,data='9',on_click=BT),
                         ft.ElevatedButton(text='x', bgcolor=c_lightblue, color=c_yellow,expand=1,data='*',on_click=BT),
                     ],
-                    #alignment=ft.MainAxisAlignment.SPACE_BETWEEN
                 ),
                     ft.Row(controls=
                     [
@@ -94,7 +90,6 @@ def main(pg : ft.Page):
                         ft.ElevatedButton(text='6', bgcolor=c_lowblue, color=c_white,expand=1,data='6',on_click=BT),
                         ft.ElevatedButton(text='-', bgcolor=c_lightblue, color=c_yellow,expand=1,data='-',on_click=BT),
                     ],
-                    #alignment=ft.MainAxisAlignment.SPACE_BETWEEN
                 ),
                     ft.Row(controls=
                     [
@@ -103,7 +98,6 @@ def main(pg : ft.Page):
                         ft.ElevatedButton(text='3', bgcolor=c_lowblue, color=c_white,expand=1,data='3',on_click=BT),
                         ft.ElevatedButton(text='+', bgcolor=c_lightblue, color=c_yellow,expand=1,data='+',on_click=BT),
                     ],
-                    #alignment=ft.MainAxisAlignment.SPACE_BETWEEN
                 ),
                     ft.Row(controls=
                     [
@@ -111,7 +105,6 @@ def main(pg : ft.Page):
                         ft.ElevatedButton(text='.', bgcolor=c_lowblue, color=c_white,expand=1,data='.',on_click=BT),
                         ft.ElevatedButton(text='=', bgcolor=c_lightblue, color=c_yellow,expand=1, data='=',on_click=BT),
                     ],
-                    #alignment=ft.MainAxisAlignment.SPACE_BETWEEN
                 )
                 ]
             )
