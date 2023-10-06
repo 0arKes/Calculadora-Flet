@@ -1,13 +1,5 @@
 import flet as ft
 
-guardar = []
-
-
-def historico(h:list):
-    with open ('Historico.txt','a') as arq:
-        arq.write(f'{h}\n')
-
-
 def main(pg : ft.Page):
     #paleta de cores
     c_blue = '#16213E'
@@ -29,7 +21,7 @@ def main(pg : ft.Page):
                              text_style=ft.TextStyle(size=30,color=c_white)
                             )
     
-
+#função para os botões
     def BT (e):
         data = e.control.data
 
@@ -42,23 +34,16 @@ def main(pg : ft.Page):
             resultado.value = (str(eval(resultado.value)))
             pg.update()
 
-            
-
         if data == 'ac':
             resultado.value = ''
             pg.update()
 
         if data == '=':
-
-            
-            guardar.append(resultado.value)
-            historico(guardar)
-
             resultado.value = str(eval(resultado.value))
             print(resultado.value)
             pg.update()
 
-
+#criando elementos dentro da aplicação
     pg.add(
         ft.Container
         (
