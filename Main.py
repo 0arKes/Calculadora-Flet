@@ -25,19 +25,23 @@ def main(pg : ft.Page):
     def BT (e):
         data = e.control.data
 
+        #escreve o numero no app
         if data in ['1','2','3','4','5','6','7','8','9','0','*','.','%','/','-','+']:  
             resultado.value = str(resultado.value) + str(data)
             pg.update()
-        
+
+        #eleva ao quadrado
         if data == '**2':
             resultado.value = str(resultado.value) + str(data)
             resultado.value = (str(eval(resultado.value)))
             pg.update()
 
+        #limpa os dados
         if data == 'ac':
             resultado.value = ''
             pg.update()
-
+            
+        #mostra o resultado
         if data == '=':
             resultado.value = str(eval(resultado.value))
             print(resultado.value)
@@ -66,41 +70,41 @@ def main(pg : ft.Page):
                         ft.Row(
                         controls=
                     [
-                        ft.ElevatedButton(text='AC', bgcolor=c_lightblue, color=c_red,expand=2,data='ac',on_click=BT),
-                        ft.ElevatedButton(text='/', bgcolor=c_lightblue, color=c_yellow,expand=1,data='/',on_click=BT),
-                        ft.ElevatedButton(text='²', bgcolor=c_lightblue, color=c_white,expand=1,data='**2',on_click=BT),
+                        ft.ElevatedButton(text='AC', bgcolor=c_lightblue, color=c_red,expand=2, data='ac', on_click=BT),
+                        ft.ElevatedButton(text='/', bgcolor=c_lightblue, color=c_yellow,expand=1, data='/', on_click=BT),
+                        ft.ElevatedButton(text='²', bgcolor=c_lightblue, color=c_white,expand=1, data='**2', on_click=BT),
 
                     ], 
                 ),
                     ft.Row(controls=
                     [
-                        ft.ElevatedButton(text='7', bgcolor=c_lowblue, color=c_white,expand=1,data='7',on_click=BT),
-                        ft.ElevatedButton(text='8', bgcolor=c_lowblue, color=c_white,expand=1,data='8',on_click=BT),
-                        ft.ElevatedButton(text='9', bgcolor=c_lowblue, color=c_white,expand=1,data='9',on_click=BT),
-                        ft.ElevatedButton(text='x', bgcolor=c_lightblue, color=c_yellow,expand=1,data='*',on_click=BT),
+                        ft.ElevatedButton(text='7', bgcolor=c_lowblue, color=c_white,expand=1, data='7', on_click=BT),
+                        ft.ElevatedButton(text='8', bgcolor=c_lowblue, color=c_white,expand=1,data='8', on_click=BT),
+                        ft.ElevatedButton(text='9', bgcolor=c_lowblue, color=c_white,expand=1,data='9', on_click=BT),
+                        ft.ElevatedButton(text='x', bgcolor=c_lightblue, color=c_yellow,expand=1,data='*', on_click=BT),
                     ],
                 ),
                     ft.Row(controls=
                     [
-                        ft.ElevatedButton(text='4', bgcolor=c_lowblue, color=c_white,expand=1,data='4',on_click=BT),
-                        ft.ElevatedButton(text='5', bgcolor=c_lowblue, color=c_white,expand=1,data='5',on_click=BT),
-                        ft.ElevatedButton(text='6', bgcolor=c_lowblue, color=c_white,expand=1,data='6',on_click=BT),
-                        ft.ElevatedButton(text='-', bgcolor=c_lightblue, color=c_yellow,expand=1,data='-',on_click=BT),
+                        ft.ElevatedButton(text='4', bgcolor=c_lowblue, color=c_white, expand=1,data='4', on_click=BT),
+                        ft.ElevatedButton(text='5', bgcolor=c_lowblue, color=c_white, expand=1,data='5', on_click=BT),
+                        ft.ElevatedButton(text='6', bgcolor=c_lowblue, color=c_white, expand=1,data='6', on_click=BT),
+                        ft.ElevatedButton(text='-', bgcolor=c_lightblue, color=c_yellow, expand=1,data='-', on_click=BT),
                     ],
                 ),
                     ft.Row(controls=
                     [
-                        ft.ElevatedButton(text='1', bgcolor=c_lowblue, color=c_white,expand=1,data='1',on_click=BT),
-                        ft.ElevatedButton(text='2', bgcolor=c_lowblue, color=c_white,expand=1,data='2',on_click=BT),
-                        ft.ElevatedButton(text='3', bgcolor=c_lowblue, color=c_white,expand=1,data='3',on_click=BT),
-                        ft.ElevatedButton(text='+', bgcolor=c_lightblue, color=c_yellow,expand=1,data='+',on_click=BT),
+                        ft.ElevatedButton(text='1', bgcolor=c_lowblue, color=c_white, expand=1,data='1', on_click=BT),
+                        ft.ElevatedButton(text='2', bgcolor=c_lowblue, color=c_white, expand=1,data='2', on_click=BT),
+                        ft.ElevatedButton(text='3', bgcolor=c_lowblue, color=c_white, expand=1,data='3', on_click=BT),
+                        ft.ElevatedButton(text='+', bgcolor=c_lightblue, color=c_yellow, expand=1,data='+', on_click=BT),
                     ],
                 ),
                     ft.Row(controls=
                     [
-                        ft.ElevatedButton(text='0', bgcolor=c_lowblue, color=c_white,expand=2,data='0',on_click=BT),
-                        ft.ElevatedButton(text='.', bgcolor=c_lowblue, color=c_white,expand=1,data='.',on_click=BT),
-                        ft.ElevatedButton(text='=', bgcolor=c_lightblue, color=c_yellow,expand=1, data='=',on_click=BT),
+                        ft.ElevatedButton(text='0', bgcolor=c_lowblue, color=c_white, expand=2,data='0', on_click=BT),
+                        ft.ElevatedButton(text='.', bgcolor=c_lowblue, color=c_white, expand=1,data='.', on_click=BT),
+                        ft.ElevatedButton(text='=', bgcolor=c_lightblue, color=c_yellow, expand=1, data='=', on_click=BT),
                     ],
                 )
                 ]
