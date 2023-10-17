@@ -1,2 +1,2 @@
 # Calculadora Flet
- Uma calculadora ultilizando o framework flet
+### Uma simples calculadora ultilizando o framework flet
